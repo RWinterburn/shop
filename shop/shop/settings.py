@@ -152,3 +152,14 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
+
+STATIC_URL = '/static/'
+
+# Static files directory
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # This is where your base.css should go
+]
+
+# This is used when you run 'collectstatic' in production environments
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
